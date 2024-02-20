@@ -13,7 +13,7 @@ pipeline {
 
         stage('Checkout from SCM') {
             steps {
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/dcolanderjr/pipeline_project/tree/main/gitops-pipeline-app'
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/dcolanderjr/gitops-pipeline-app'
             }
         }
 
@@ -25,6 +25,6 @@ pipeline {
                 cat deployment.yaml
                 """
                 withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
-                    sh "git push https://github.com/dcolanderjr/pipeline_project/tree/main/gitops-pipeline-app main"
+                    sh "git push https://github.com/dcolanderjr/gitops-pipeline-app main"
             }
         }
