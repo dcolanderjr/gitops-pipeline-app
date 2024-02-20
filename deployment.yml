@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: pipeline-project
-          image: dcolanderjr/pipeline_project_app:1.0.0-84
+          image: dcolanderjr/pipeline_project_app:1.0.0-85
           resources:
             limits:
               memory: "256Mi"
